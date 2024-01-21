@@ -52,7 +52,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input name="email" type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                                    <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                                     <span class="text-danger">
                                         <?= $_SESSION['errors']['email'] ?? '' ?>
                                     </span>

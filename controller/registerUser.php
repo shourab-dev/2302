@@ -55,5 +55,15 @@ if( count($errors) > 0 ){
 
 } else {
     //* REGISTER 
+    $encPass = password_hash($password,PASSWORD_BCRYPT);
+    
+    $query = "INSERT INTO users(fname, lname, email, password) VALUES ('$firstName', '$lastName', '$email', '$encPass')";
+
+    $response = mysqli_query($conn, $query);
+    //* SUCCESFULLY REGISTER
+    if($response){
+        header('Location: ../backend/login.php');
+    }
+
     
 }
